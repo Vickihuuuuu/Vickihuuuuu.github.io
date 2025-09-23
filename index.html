@@ -152,24 +152,18 @@
 
         /* --- Funnel Visual --- */
         .funnel-visual {
-            flex-basis: 40%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 320px; /* overall funnel width */
         }
-        .funnel-stage {
-            width: 100%;
-            padding: 15px 10px;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.1em;
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-            margin-bottom: -1px; /* Overlap slightly */
-        }
-        .stage-awareness { background-color: #007bff; width: 100%; }
-        .stage-engagement { background-color: #005a9c; width: 80%; }
-        .stage-conversion { background-color: #003f6e; width: 60%; }
+        /* Common funnel stage style */
+        .funnel-stage {color: #fff;font-weight: bold;font-size: 1.1em;text-align: center;display: flex;justify-content: center;align-items: center;height: 80px;
+                      }
+        
+        .stage-awareness {background: #1E80FF;width: 100%;clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);}
+        .stage-engagement {background: #004a9f;width: 85%;clip-path: polygon(5% 0, 95% 0, 85% 100%, 15% 100%);}
+        .stage-conversion {background: #002f55;width: 70%;clip-path: polygon(10% 0, 90% 0, 80% 100%, 20% 100%);}
 
         /* --- Funnel Description --- */
         .funnel-description {
