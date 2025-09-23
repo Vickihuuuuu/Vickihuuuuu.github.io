@@ -144,17 +144,29 @@
 
         /* --- Section-Specific Styles --- */
         /* Growth Engine */
-        .funnel-layout { display: flex; gap: 40px; align-items: center; }
-        .funnel-visual { flex: 0 0 150px; }
-        .funnel-stage { padding: 20px; text-align: center; font-weight: bold; color: white; margin: 0 auto; clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%); }
+        .funnel-layout { display: flex; gap: 40px; align-items: stretch; }
+        .funnel-visual {
+            flex: 1; /* This makes it take up 50% of the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers the funnel vertically within its column */
+        }
+        .funnel-stage {
+            padding: 30px 20px; /* Increased padding for more height */
+            font-size: 1.2em; /* Larger font */
+            font-weight: bold;
+            color: white;
+            margin: 0 auto;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
         .stage-awareness { background-color: var(--primary-color); width: 100%; }
-        .stage-engagement { background-color: #007bb5; width: 80%; margin-top: -10px; }
-        .stage-conversion { background-color: #009ce3; width: 60%; margin-top: -10px; }
-        .funnel-description { flex: 1; }
-        .description-item { margin-bottom: 20px; }
-        .description-item h4 { color: var(--secondary-color); font-size: 1.2em; margin-bottom: 10px; }
+        .stage-engagement { background-color: #007bb5; width: 80%; margin-top: -15px; }
+        .stage-conversion { background-color: #009ce3; width: 60%; margin-top: -15px; }
+        .funnel-description { flex: 1; display: flex;flex-direction: column;justify-content: space-around;}
+        .description-item { margin-bottom: 0; }
+        .description-item h4 { color: var(--secondary-color); font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
         .description-item ul { list-style: none; padding-left: 0; }
-        .description-item li { background-color: var(--light-gray-bg); padding: 10px; border-radius: 5px; margin-bottom: 5px; }
+        .description-item li { background-color: var(--light-gray-bg); padding: 12px 15px; border-radius: 5px; margin-bottom: 8px; border: 1px solid #eef2f5;}
         .foundation { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
         .foundation h3 { text-align: center; color: var(--primary-color); font-size: 1.6em; margin-bottom: 30px; }
         .foundation-pillars { display: flex; gap: 30px; }
@@ -186,6 +198,14 @@
         .chart-container { flex-basis: 65%; position: relative; min-height: 400px; }
 
         /* --- 5. RESPONSIVE DESIGN --- */
+        @media (max-width: 900px) {
+            .funnel-layout {
+                flex-direction: column;
+            }
+            .funnel-visual {
+                margin-bottom: 40px; /* Adds space between the funnel and text when stacked */
+            }
+        }
         @media (max-width: 960px) {
             .hero-image-grid { grid-template-columns: repeat(3, 1fr); }
             .agenda-links, .foundation-pillars, .three-column { flex-direction: column; }
