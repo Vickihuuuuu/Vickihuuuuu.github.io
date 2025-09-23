@@ -144,28 +144,62 @@
 
         /* --- Section-Specific Styles --- */
         /* Growth Engine */
-        .funnel-layout { display: flex; gap: 40px; align-items: stretch; }
-        .funnel-visual {
-            flex: 1; /* This makes it take up 50% of the available space */
+        .funnel-layout {
             display: flex;
-            flex-direction: column;
-            justify-content: center; /* Centers the funnel vertically within its column */
+            gap: 40px;
+            align-items: center; /* Vertically centers the funnel with the text blocks */
         }
+
+        /* The funnel graphic container now lays out its children in a row */
+        .funnel-visual {
+            flex: 1;
+            display: flex;
+            flex-direction: row; /* This is the key change: lays out stages horizontally */
+            height: 120px; /* Gives the funnel a consistent height */
+        }
+
+        /* Base styles for each stage of the horizontal funnel */
         .funnel-stage {
-            padding: 30px 20px; /* Increased padding for more height */
-            font-size: 1.2em; /* Larger font */
+            flex: 1; /* Each stage takes up equal space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
             color: white;
-            margin: 0 auto;
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+            font-size: 1.1em;
+            padding: 0; /* Padding is removed, sizing is handled by flexbox */
         }
-        .stage-awareness { background-color: var(--primary-color); width: 100%; }
-        .stage-engagement { background-color: #007bb5; width: 80%; margin-top: -15px; }
-        .stage-conversion { background-color: #009ce3; width: 60%; margin-top: -15px; }
-        .funnel-description { flex: 1; display: flex;flex-direction: column;justify-content: space-around;}
+
+        /* Specific shapes and colors for each stage using clip-path */
+        .stage-awareness {
+            background-color: var(--primary-color); /* Darkest blue */
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+            z-index: 3; /* Ensures it's on top */
+        }
+        .stage-engagement {
+            background-color: #007bb5; /* Medium blue */
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+            margin-left: -12%; /* Pulls the segment to the left to create the overlap */
+            z-index: 2;
+        }
+        .stage-conversion {
+            background-color: #009ce3; /* Lightest blue */
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            margin-left: -12%; /* Pulls the segment to the left to create the overlap */
+            z-index: 1;
+        }
+
+        /* The text description container */
+        .funnel-description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Evenly spaces the text blocks */
+            align-self: stretch; /* Makes sure it stretches to full height */
+        }
         .description-item { margin-bottom: 0; }
         .description-item h4 { color: var(--secondary-color); font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
-        .description-item ul { list-style: none; padding-left: 0; }
+        .description-item ul { list-style: none; padding-left: 0; margin-top: 0; }
         .description-item li { background-color: var(--light-gray-bg); padding: 12px 15px; border-radius: 5px; margin-bottom: 8px; border: 1px solid #eef2f5;}
         .foundation { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
         .foundation h3 { text-align: center; color: var(--primary-color); font-size: 1.6em; margin-bottom: 30px; }
