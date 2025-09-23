@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building the Value Ecosystem</title>
+    <style>
+        /* --- Basic Setup --- */
+        :root {
+            --primary-color: #005A9C;
+            --secondary-color: #003F6E;
+            --accent-color: #FFC107;
+            --text-color: #333;
+            --bg-color: #f4f7f9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* --- Main Container --- */
+        .ecosystem-container {
+            width: 100%;
+            max-width: 1100px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        /* --- Header --- */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h2 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            margin: 0 0 5px 0;
+        }
+        .header p {
+            font-size: 1.25em;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* --- Main Content Layout --- */
+        .content-layout {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        /* --- Left Side: Photo Gallery --- */
+        .photo-gallery {
+            flex-basis: 45%;
+            min-width: 300px;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        /* --- Right Side: Value Propositions --- */
+        .value-propositions {
+            flex-basis: 55%;
+        }
+        .partner-section {
+            margin-bottom: 25px;
+        }
+        .partner-section h3 {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .partner-section .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .partner-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .partner-section li {
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            padding-left: 28px;
+            position: relative;
+        }
+        .partner-section li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+        
+        /* --- Key Abilities Section --- */
+        .abilities-summary {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #f9fafb;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+        }
+        .abilities-summary h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .abilities-summary ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .abilities-summary li {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 900px) {
+            .content-layout {
+                flex-direction: column;
+            }
+            .photo-gallery {
+                margin-bottom: 40px;
+            }
+        }
+        @media (max-width: 768px) {
+            .ecosystem-container { padding: 25px; }
+            .header h2 { font-size: 2em; }
+            .abilities-summary ul { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ecosystem-container">
+
+    <div class="header">
+        <h2>Building the Value Ecosystem</h2>
+        <p>The overseas product I built was a sustainable ecosystem where corporate partners, universities, and students all received compelling value—a true "win-win-win" proposition.</p>
+    </div>
+
+    <div class="content-layout">
+        <div class="photo-gallery">
+            <div class="photo-grid">
+                <!-- Replace these with your actual photo paths -->
+                <img src="https://via.placeholder.com/150/005A9C/FFFFFF?text=Program" alt="Program Photo 1">
+                <img src="https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Team" alt="Program Photo 2">
+                <img src="https://via.placeholder.com/150/FFC107/333333?text=Event" alt="Program Photo 3">
+                <img src="https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Students" alt="Program Photo 4">
+                <img src="https://via.placeholder.com/150/003F6E/FFFFFF?text=Partner" alt="Program Photo 5">
+                <img src="https://via.placeholder.com/150/CCCCCC/FFFFFF?text=Briefing" alt="Program Photo 6">
+            </div>
+        </div>
+
+        <div class="value-propositions">
+            
+            <div class="partner-section">
+                <h3><span class="icon">🤝</span> How I Secured Corporate Buy-In</h3>
+                <ul>
+                    <li>Pitched an exclusive, pre-vetted talent pipeline.</li>
+                    <li>Framed the program as a high-impact CSR & branding opportunity.</li>
+                    <li>Highlighted the value of direct Gen Z consumer insights.</li>
+                </ul>
+            </div>
+
+            <div class="partner-section">
+                <h3><span class="icon">🏛️</span> How I Engaged Academic Partners</h3>
+                <ul>
+                    <li>Collaborated with career services to launch a module for team-based, practical experience.</li>
+                    <li>Designed win-win revenue-sharing and co-branding models.</li>
+                    <li>Positioned the program as the essential bridge from theory to practice.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="abilities-summary">
+        <h3>Key Abilities Demonstrated</h3>
+        <!-- UPDATED, VALUE-DRIVEN LIST -->
+        <ul>
+            <li>Mutual Value Creation</li>
+            <li>Ecosystem Design</li>
+            <li>Strategic Partnership Building</li>
+            <li>Cross-Border Market Localization</li>
+            <li>Principled Negotiation</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
