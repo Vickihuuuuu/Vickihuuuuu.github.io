@@ -147,55 +147,61 @@
         .funnel-layout {
             display: flex;
             gap: 40px;
-            align-items: center; /* Vertically centers the funnel with the text blocks */
+            align-items: center;
         }
 
-        /* The funnel graphic container now lays out its children in a row */
+        /* The container for the visual bar */
         .funnel-visual {
-            flex: 1;
+            flex: 1; /* Takes up 50% of the space */
             display: flex;
-            flex-direction: row; /* This is the key change: lays out stages horizontally */
-            height: 120px; /* Gives the funnel a consistent height */
+            flex-direction: row; /* Arrange stages side-by-side */
+            height: 80px; /* A fixed height for the bar */
+            border-radius: 5px; /* Optional: slightly rounded corners for the whole bar */
+            overflow: hidden; /* This is important to correctly render the clip-paths */
         }
 
-        /* Base styles for each stage of the horizontal funnel */
+        /* Base styles for each stage of the bar */
         .funnel-stage {
-            flex: 1; /* Each stage takes up equal space */
+            flex: 1; /* Each stage takes up 1/3 of the space */
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
             color: white;
             font-size: 1.1em;
-            padding: 0; /* Padding is removed, sizing is handled by flexbox */
+            padding: 0;
+            /* Remove any previous clip-path from the base style */
+            clip-path: none; 
         }
 
-        /* Specific shapes and colors for each stage using clip-path */
+        /* The first stage is a simple rectangle with an angled right edge */
         .stage-awareness {
             background-color: var(--primary-color); /* Darkest blue */
-            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
-            z-index: 3; /* Ensures it's on top */
-        }
-        .stage-engagement {
-            background-color: #007bb5; /* Medium blue */
-            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
-            margin-left: -12%; /* Pulls the segment to the left to create the overlap */
-            z-index: 2;
-        }
-        .stage-conversion {
-            background-color: #009ce3; /* Lightest blue */
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-            margin-left: -12%; /* Pulls the segment to the left to create the overlap */
-            z-index: 1;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
         }
 
-        /* The text description container */
+        /* The second stage is a parallelogram that overlaps the first */
+        .stage-engagement {
+            background-color: #007bb5; /* Medium blue */
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+            /* Pulls it over the first stage to create the overlap effect */
+            margin-left: -10%; 
+        }
+
+        /* The third stage is a parallelogram that overlaps the second */
+        .stage-conversion {
+            background-color: #009ce3; /* Lightest blue */
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+            /* Pulls it over the second stage */
+            margin-left: -10%;
+        }
+
+        /* The text description container (no changes needed here, but included for context) */
         .funnel-description {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Evenly spaces the text blocks */
-            align-self: stretch; /* Makes sure it stretches to full height */
+            justify-content: space-around;
         }
         .description-item { margin-bottom: 0; }
         .description-item h4 { color: var(--secondary-color); font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
