@@ -283,19 +283,29 @@
         }
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .photo-grid figure {
+            margin: 0;
+            text-align: center;
         }
         .photo-grid img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
         .photo-grid img:hover {
             transform: scale(1.05);
             z-index: 10;
+        }
+        .photo-grid figcaption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #555;
         }
 
         /* --- Right Side: Value Propositions --- */
@@ -506,13 +516,33 @@
             <div class="content-layout">
                 <div class="photo-gallery">
                     <div class="photo-grid">
-                        <!-- Replace these with your actual photo paths -->
-                        <img src="MBA.jpg" alt="Program Photo 1">
-                        <img src="unv.jpg" alt="Program Photo 2">
-                        <img src="nus.jpg" alt="Program Photo 3">
-                        <img src="pwc.jpg" alt="Program Photo 4">
+                        <figure>
+                            <img src="MBA.jpg" alt="Program Photo 1">
+                            <figcaption>MBA Program Exchange</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="unv2.jpg" alt="Program Photo 2">
+                            <figcaption>University Collaboration – Visit to LegCo</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="nus.jpg" alt="Program Photo 3">
+                            <figcaption>NUS Campus Run</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pwc.jpg" alt="Program Photo 4">
+                            <figcaption>PWC Corporate Workshop</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="HKUST.jpg" alt="Program Photo 5">
+                            <figcaption>HKUST Campus Visit</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pwc.jpg" alt="Program Photo 6">
+                            <figcaption>Singapore FinTech Workshop</figcaption>
+                        </figure>
                     </div>
                 </div>
+            </div>
 
             <div class="value-propositions">
                 
