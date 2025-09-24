@@ -40,7 +40,7 @@
             text-align: center;
             background-attachment: fixed; /* optional parallax effect */
             background-repeat: no-repeat;
-            background-size: contain;   /* show full image */
+            background-size: cover;   /* show full image */
             background-position: center;
         }
         
@@ -424,12 +424,16 @@
             .content-layout {flex-direction: column;}
             .photo-gallery, .value-propositions {flex: 1 1 100%;max-width: 100%;}
         }
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll; /* safer on mobile */}
+        }
     </style>
 </head>
 <body>
 
 <!-- HERO SECTION -->
-<div class="hero-section" style="background-image: url('xicai.jpg'); background-size: cover; background-position: center;">
+<div class="hero-section" style="background-image: url('xicai3.jpg'); background-size: cover; background-position: center;">
     <div class="hero-overlay">
         <h1>Xinchen Hu</h1>
         <p class="subtitle">Scaling Educational Programs at Biden Consulting</p>
