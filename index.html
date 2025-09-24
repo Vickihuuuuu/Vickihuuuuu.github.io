@@ -404,6 +404,42 @@
         .program-selector button.active { background-color: var(--primary-color); color: white; border-color: var(--secondary-color); }
         .chart-container { flex-basis: 65%; position: relative; min-height: 400px; }
 
+        .metric-explanations {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .metric-explanations h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .metric-explanations ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .metric-explanations li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1.05em;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .metric-explanations li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         /* --- 5. RESPONSIVE DESIGN --- */
         @media (max-width: 960px) {
             .hero-section h1 { font-size: 2.2em; }
@@ -528,9 +564,9 @@
             <h2>The Training Curriculum</h2>
             <h3>From Recruits to Revenue Drivers: 'Why' - ‘How’ - ‘What’</h3>
             <div class="three-column">
-                <div class="column"><h4>1. Strategic Alignment & Market Insight(The 'Why')</h4><p>We cultivated genuine partnership by aligning our mission with the ambassadors' own career aspirations and financial goals. This transformed their deep understanding of the market landscape and our value proposition into a powerful, intrinsic motivation to succeed.</p></div>
-                <div class="column"><h4>2. Operational Process Mastery (The 'How')</h4><p>Ambassadors learned how to manage our entire student acquisition process from start to finish. This included everything from generating awareness through ads to leading engaging briefing sessions, giving them the expertise to guide potential students effectively.</p></div>
-                <div class="column"><h4>3. Hands-On Execution & Communication (The 'What')</h4><p>They mastered the 'What'. This focused on practical skills like public speaking, consultative sales, and using our SOPs.</p></div>
+                <div class="column"><h4>1. Strategic Alignment & Market Insight(The 'Why')</h4><p>We cultivated genuine partnership by aligning our mission with the ambassadors' own career aspirations and financial goals, creating an intrinsic motivation to succeed.</p></div>
+                <div class="column"><h4>2. Operational Process Mastery (The 'How')</h4><p>Training covered our entire acquisition funnel, from generating awareness (ads) to engagement.</p></div>
+                <div class="column"><h4>3. Continuous Coaching & Development (The 'What')</h4><p>This involved ongoing performance coaching, from providing direct feedback on skills like public speaking to enabling top performers to share their winning strategies with the team.</p></div>
             </div>
         </div>
     </div>
@@ -565,11 +601,11 @@
                         <figcaption>PwC Corporate Workshop</figcaption>
                     </figure>
                     <figure>
-                        <img src="HKUST.jpg" alt="Program Photo 5">
-                        <figcaption>HKUST Campus Visit</figcaption>
+                        <img src="dji1.jpg" alt="Program Photo 5">
+                        <figcaption>Singapore Student Delegation at DJI</figcaption>
                     </figure>
                     <figure>
-                        <img src="unv2.jpg" alt="Program Photo 6">
+                        <img src="unv2_1.jpg" alt="Program Photo 6">
                         <figcaption>University Collaboration – Visit to LegCo</figcaption>
                     </figure>
                 </div>
@@ -603,6 +639,7 @@
                 <li>Cross-Functional Partnership Building</li>
                 <li>Strategic Value Proposition Design</li>
                 <li>Ecosystem Strategy & Development</li>
+                <li>Cross-Border Market Localization</li>
             </ul>
         </div>
     </div>
@@ -615,9 +652,9 @@
         </div>
         <div class="chart-showcase-layout">
             <div class="program-selector">
-                <button class="program-btn active" data-program="hk">Hong Kong Global Perspective</button>
-                <button class="program-btn" data-program="sg">Singapore Overseas Elite</button>
-                <button class="program-btn" data-program="sz">Shenzhen Financial Program</button>
+                <button class="program-btn active" data-program="hk">Hong Kong Global Perspective Program</button>
+                <button class="program-btn" data-program="sg">Singapore Overseas Elite Program</button>
+                <button class="program-btn" data-program="sz">Shenzhen Financial Investment Program</button>
                 <button class="program-btn" data-program="comp">Industry Research Competition</button>
                 <button class="program-btn" data-program="custom">Customized Projects</button>
             </div>
@@ -625,8 +662,18 @@
                 <canvas id="programSpiderChart"></canvas>
             </div>
         </div>
+        <div class="metric-explanations">
+            <h3>Metric Explanations</h3>
+            <ul>
+                <li><strong>Profitability:</strong> Measures the financial return of the program. High score = high margin.</li>
+                <li><strong>Brand Impact:</strong> How much does this program enhance company brand's prestige and visibility? High score = significant brand lift.</li>
+                <li><strong>Participant Value:</strong> The educational, career, and experiential value delivered to the students. High score = transformative experience.</li>
+                <li><strong>Operational Efficiency:</strong> Preparation Time, this positive metric measures how easy the program is to run, scale, and replicate. A program with long prep time has low efficiency. High score = streamlined and scalable.</li>
+                <li><strong>Partner Integration:</strong> How deeply and strategically does this program engage our corporate and academic partners? High score = deep, mutually beneficial partnerships.</li>
+                <li><strong>Innovation Level:</strong> Does this program represent a unique, cutting-edge offering, or is it a more traditional model? High score = highly innovative.</li>
+            </ul>
+        </div>
     </div>
-
 </div>
 
 <script>
