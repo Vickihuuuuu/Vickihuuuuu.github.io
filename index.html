@@ -198,11 +198,45 @@
             margin: 40px 0;
         }
 
-        .work-gallery img {
-            width: 45%;          /* two photos side by side */
+        .work-item {
+            position: relative;
+            width: 45%;
+            overflow: hidden;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .work-item img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
             object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        /* Overlay styles */
+        .work-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 12px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 0 0 12px 12px;    
+        }
+
+        /* Hover effect */
+        .work-item:hover img {
+            transform: scale(1.05); /* subtle zoom */
+        }
+
+        .work-item:hover .overlay {
+            opacity: 1; /* fade in */
         }
         
         /* Value Ecosystem */
@@ -433,18 +467,26 @@
         <div class="foundation">
             <h3>The Foundation of Our Success</h3>
             <div class="foundation-pillars">
-                <div class="pillar"><div class="icon">👥</div><h4>Elite Campus Ambassador Program</h4><p>Recruited, trained, and managed a 30+ person team to execute the funnel strategy on the ground.</p></div>
-                <div class="pillar"><div class="icon">📋</div><h4>Standardized Operating Procedures (SOPs)</h4><p>Developed a complete playbook ('话术手册') for marketing and sales to ensure consistency and scalability.</p></div>
+                <div class="pillar"><div class="icon">👥</div><h4>Elite Campus Ambassador Program</h4><p>Recruited, trained, and managed 30+ campus teams to execute the funnel strategy on the ground.</p></div>
+                <div class="pillar"><div class="icon">📋</div><h4>Standardized Operating Procedures (SOPs)</h4><p>Developed a complete playbook for marketing and sales to ensure consistency and scalability.</p></div>
             </div>
         </div>
-        <section class="work-gallery">
-            <img src="xicai2.jpg" alt="Work Photo 1">
-            <img src="nankai.jpg" alt="Work Photo 2">
-        </section>
+
+        <div class="work-gallery">
+            <div class="work-item">
+                <img src="xicai2.jpg" alt="Work Photo 1">
+                <div class="overlay">On-site Briefing</div>
+            </div>
+
+            <div class="work-item">
+                <img src="nankai.jpg" alt="Work Photo 2">
+                <div class="overlay">Running a team training session</div>
+            </div>
+        </div>
+
         <div class="training-curriculum">
             <h2>The Training Curriculum</h2>
-            <h3>From Recruits to Revenue Drivers</h3>
-            <p>'Why' - ‘How’ - ‘What’</p>
+            <h3>From Recruits to Revenue Drivers: 'Why' - ‘How’ - ‘What’</h3>
             <div class="three-column">
                 <div class="column"><h4>1. Product & Market Mastery</h4><p>Ambassadors learned the 'Why'. They understood our value proposition, competitive advantages, and the student career landscape.</p></div>
                 <div class="column"><h4>2. Funnel & Process Expertise</h4><p>They learned the 'How'. Training covered our entire acquisition funnel, from generating awareness (ads) to engagement (briefings).</p></div>
