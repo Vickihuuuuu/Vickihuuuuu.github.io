@@ -271,16 +271,21 @@
 
         /* --- Main Content Layout --- */
         .content-layout {
-            display: flex;
+            display: flex;               /* IMPORTANT: row layout */
             gap: 40px;
-            margin-top: 40px;
+            align-items: flex-start;
+            flex-wrap: wrap;             /* allow wrap on small screens */
+            margin-top: 40px;    
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* --- Left Side: Photo Gallery --- */
         .photo-gallery {
-            flex-basis: 45%;
-            min-width: 300px;
-            flex: 1;
+            flex: 0 0 45%;               /* fixed ~45% width */
+            max-width: 45%;
+            min-width: 280px;            /* ensures reasonable min column width */
+            box-sizing: border-box;
         }
         .photo-grid {
             display: grid;
