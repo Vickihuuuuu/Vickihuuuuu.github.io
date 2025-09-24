@@ -314,6 +314,32 @@
             color: #555;
         }
 
+        .photo-grid-with-captions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-item {text-align: center;}
+        
+        .photo-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item img:hover {transform: scale(1.05);}
+        
+        .photo-item p {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: #555;
+            margin: 0;
+        }
+
         /* --- Right Side: Value Propositions --- */
         .value-propositions {
             flex: 0 0 55%;
@@ -515,66 +541,49 @@
         </div>
     </div>
 
-    <!-- SECTION 2: BUILDING THE VALUE ECOSYSTEM -->
+    <!-- SECTION 2: BUILDING THE VALUE ECOSYSTEM (REVISED) -->
     <div class="content-block" id="ecosystem">
+        <div class="header">
+            <h2>Building the Value Ecosystem</h2>
+            <p>My role was to design and negotiate a "Win-Win-Win" proposition that aligned the distinct goals of corporate partners, academic institutions, and students into one sustainable growth engine.</p>
+        </div>
 
-            <div class="header">
-                <h2>Building the Value Ecosystem</h2>
-                <p>My role was to design and negotiate a "Win-Win-Win" proposition that aligned the distinct goals of corporate partners, academic institutions, and students into one sustainable growth engine.</p>
+        <!-- This content-layout div was missing. It makes the two sections below appear side-by-side. -->
+        <div class="content-layout">
+        
+            <!-- The photo gallery on the left -->
+            <div class="photo-gallery">
+                <div class="photo-grid-with-captions">
+                    <div class="photo-item"><img src="MBA.jpg" alt="MBA Program Exchange"><p>MBA Program Exchange</p></div>
+                    <div class="photo-item"><img src="SG.jpg" alt="Singapore FinTech Workshop"><p>Singapore FinTech Workshop</p></div>
+                    <div class="photo-item"><img src="nus.jpg" alt="NUS Campus Run"><p>NUS Campus Run</p></div>
+                    <div class="photo-item"><img src="pwc.jpg" alt="PWC Corporate Workshop"><p>PWC Corporate Workshop</p></div>
+                    <div class="photo-item"><img src="HKUST.jpg" alt="HKUST Campus Visit"><p>HKUST Campus Visit</p></div>
+                    <div class="photo-item"><img src="unv2.jpg" alt="University Collaboration"><p>University Collaboration</p></div>
+                </div>
             </div>
 
-            <div class="content-layout">
-                <div class="photo-gallery">
-                    <div class="photo-grid">
-                        <figure>
-                            <img src="MBA.jpg" alt="Program Photo 1">
-                            <figcaption>MBA Program Exchange</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="SG.jpg" alt="Program Photo 2">
-                            <figcaption>Singapore FinTech Workshop</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="nus.jpg" alt="Program Photo 3">
-                            <figcaption>NUS Campus Run</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="pwc.jpg" alt="Program Photo 4">
-                            <figcaption>PWC Corporate Workshop</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="HKUST.jpg" alt="Program Photo 5">
-                            <figcaption>HKUST Campus Visit</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="unv2.jpg" alt="Program Photo 6">
-                            <figcaption>University Collaboration – Visit to LegCo</figcaption>
-                        </figure>
-                    </div>
+            <!-- The value propositions on the right -->
+            <div class="value-propositions">
+                <div class="partner-section">
+                    <h3><span class="icon">🤝</span> How I Secured Corporate Buy-In</h3>
+                    <ul>
+                        <li>Pitched an exclusive, pre-vetted talent pipeline.</li>
+                        <li>Framed the program as a high-impact CSR & branding opportunity.</li>
+                        <li>Highlighted the value of direct Gen Z consumer insights.</li>
+                    </ul>
                 </div>
-                <div class="value-propositions">
-                    <div class="partner-section">
-                        <h3><span class="icon">🤝</span> How I Secured Corporate Buy-In</h3>
-                        <ul>
-                            <li>Pitched an exclusive, pre-vetted talent pipeline.</li>
-                            <li>Framed the program as a high-impact CSR & branding opportunity.</li>
-                            <li>Highlighted the value of direct Gen Z consumer insights.</li>
-                        </ul>
-                    </div>
-
-                    <div class="partner-section">
-                        <h3><span class="icon">🏛️</span> How I Engaged Academic Partners</h3>
-                        <ul>
-                            <!-- REVISED AND IMPROVED POINT -->
-                            <li>Collaborated with career services to launch a module for team-based, practical experience.</li>
-                            <li>Designed win-win revenue-sharing and co-branding models.</li>
-                            <li>Positioned the program as the essential bridge from theory to practice.</li>
-                        </ul>
-                    </div>
+                <div class="partner-section">
+                    <h3><span class="icon">🏛️</span> How I Engaged Academic Partners</h3>
+                    <ul>
+                        <li>Collaborated with career services to launch a module for team-based, practical experience.</li>
+                        <li>Designed win-win revenue-sharing and co-branding models.</li>
+                        <li>Positioned the program as the essential bridge from theory to practice.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    
+
         <div class="abilities-summary">
             <h3>Key Abilities Demonstrated</h3>
             <ul>
