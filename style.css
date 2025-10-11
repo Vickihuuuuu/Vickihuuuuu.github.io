@@ -246,6 +246,28 @@ body {
     opacity: 1; /* fade in */
 }
 
+/* circle plot */
+#project-lifecycle {
+  text-align: center;
+}
+
+.chart-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+}
+
+#project-lifecycle h2 {
+  color: var(--primary-color);
+}
+
+#project-lifecycle p {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  color: #444;
+}
+
 /* Value Ecosystem */
 .ecosystem-container {
     width: 100%;
@@ -459,4 +481,5 @@ body {
         background-image: linear-gradient(rgba(0, 47, 85, 0.7), rgba(0, 47, 85, 0.7)), url('xicai3_2.jpg');
         padding: 40px 20px;
     }
+
 }
