@@ -114,6 +114,73 @@ body {
     margin: 0;
 }
 
+/* --- RECOGNITION & IMPACT SECTION --- */
+.recognition-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.recognition-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.recognition-text {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.recognition-text h2 {
+  font-size: 2.2em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.recognition-text p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  color: #444;
+  max-width: 600px;
+}
+
+.recognition-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.recognition-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.recognition-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .recognition-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .recognition-text {
+    text-align: center;
+  }
+  .recognition-image img {
+    max-width: 80%;
+  }
+}
+
 /* --- 4. MAIN CONTENT AREA --- */
 .main-container {
     width: 100%;
@@ -245,94 +312,6 @@ body {
 .work-item:hover .overlay {
     opacity: 1; /* fade in */
 }
-
-/* --- PROJECT MANAGEMENT LIFECYCLE --- */
-#project-lifecycle {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.circle-container {
-  position: relative;
-  width: 350px;
-  height: 350px;
-  margin: 60px auto;
-  border-radius: 50%;
-  border: 3px dashed var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle-step {
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  background-color: white;
-  border: 3px solid var(--primary-color);
-  border-radius: 50%;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.circle-step:hover {
-  transform: scale(1.08);
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* Step positions around the circle */
-.step1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
-.step2 { right: 0; top: 50%; transform: translate(50%, -50%); }
-.step3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
-.step4 { left: 0; top: 50%; transform: translate(-50%, -50%); }
-
-.circle-step h3 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-  color: var(--primary-color);
-}
-
-.circle-step p {
-  font-size: 0.9em;
-  line-height: 1.4;
-  color: #555;
-}
-
-/* Center text inside */
-#project-lifecycle .header h2 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-#project-lifecycle .header p {
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-}
-
-/* Responsive layout for mobile */
-@media (max-width: 600px) {
-  .circle-container {
-    width: 300px;
-    height: 300px;
-  }
-  .circle-step {
-    width: 110px;
-    height: 110px;
-    padding: 8px;
-  }
-  .circle-step p {
-    font-size: 0.8em;
-  }
-}
-
 
 /* Value Ecosystem */
 .ecosystem-container {
@@ -549,4 +528,5 @@ body {
     }
 
 }
+
 
