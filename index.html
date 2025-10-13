@@ -178,7 +178,21 @@
             }
         });
     }
+    
+    // --- Button Click Handling ---
+    const buttons = document.querySelectorAll('.program-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const programKey = button.getAttribute('data-program');
+            createOrUpdateChart(programKey);
+        });
+    });
 
+    // --- Initial Chart Load ---
+    createOrUpdateChart('hk');
+</script>
     <!-- SECTION 2: BUILDING THE VALUE ECOSYSTEM (REVISED) -->
     <div class="content-block" id="ecosystem">
         <div class="header">
@@ -321,21 +335,6 @@
         </div>
     </div>
 
-
-    // --- Button Click Handling ---
-    const buttons = document.querySelectorAll('.program-btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            const programKey = button.getAttribute('data-program');
-            createOrUpdateChart(programKey);
-        });
-    });
-
-    // --- Initial Chart Load ---
-    createOrUpdateChart('hk');
-</script>
 
 </body>
 </html>
