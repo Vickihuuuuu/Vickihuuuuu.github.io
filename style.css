@@ -588,5 +588,256 @@ body {
   }
 }
 
+/* --- CONTENT PORTFOLIO STYLES --- */
+.wechat-stats-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wechat-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+    transition: transform 0.2s;
+}
+
+.wechat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: var(--primary-color);
+}
+
+.wechat-icon {
+    color: #07C160; /* WeChat Green */
+    background: #e6f7ef;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wechat-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+.wechat-handle {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+
+.wechat-meta {
+    margin: 5px 0 0 0;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.file-preview {
+    height: 180px;
+    background-color: #f1f3f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pdf-preview .file-icon {
+    font-size: 4em;
+    opacity: 0.5;
+}
+
+.file-type {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.file-details {
+    padding: 20px;
+}
+
+.file-details h4 {
+    margin: 0 0 8px 0;
+    color: var(--secondary-color);
+}
+
+.file-details p {
+    margin: 0 0 15px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.file-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-preview, .btn-download {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-preview {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.btn-preview:hover {
+    background-color: #dee2e6;
+}
+
+.btn-download {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn-download:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- COMMUNICATION SECTION STYLES --- */
+.communication-layout {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comm-card {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.comm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.comm-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.comm-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.comm-card:hover .comm-image img {
+    transform: scale(1.05);
+}
+
+.comm-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comm-content {
+    padding: 25px;
+}
+
+.comm-content h3 {
+    margin: 0 0 12px 0;
+    color: var(--secondary-color);
+    font-size: 1.3em;
+}
+
+.comm-content p {
+    margin: 0 0 20px 0;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.comm-metric {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    color: var(--primary-color);
+}
+
+.metric-icon {
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .communication-layout {
+        flex-direction: column;
+    }
+    .wechat-stats-container {
+        flex-direction: column;
+    }
+}
 
 
